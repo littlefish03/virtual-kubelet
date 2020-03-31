@@ -46,6 +46,8 @@ func NewCommand(s *provider.Store) *cobra.Command {
 					os.Exit(1)
 				}
 				fmt.Fprintln(cmd.OutOrStdout(), args[0])
+                        default:
+                                fmt.Fprintln(cmd.OutOrStdout(), "two many input parameters")
 			}
 			return
 		},
